@@ -320,6 +320,11 @@ static int GetWsAddrCallBack(void* param, const char* cmd, const char* val)
                 printf("Error: [%s][%d] getlocalIP [eth0/wlan0] failed!\n",
                     __func__, __LINE__);
         }
+
+        if (app_ipcam_LocalIP_Get("usb0", ip) != 0) {
+            printf("Error: [%s][%d] getlocalIP [usb0] failed!\n",
+                __func__, __LINE__);
+        }
         printf("getlocalIP [eth0/wlan0] %s\n", ip);
     }
 
