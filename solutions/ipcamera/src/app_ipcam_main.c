@@ -121,7 +121,8 @@ static int app_ipcam_Exit(void)
     APP_CHK_RET(app_ipcam_Record_UnInit(), "running SD Record");
     #endif
 
-    APP_CHK_RET(app_ipcam_Osdc_DeInit(), "OsdC DeInit");
+    // APP_CHK_RET(app_ipcam_Osdc_DeInit(), "OsdC DeInit");
+    (void) app_ipcam_Osdc_DeInit;
 
     #ifdef AI_SUPPORT
     APP_CHK_RET(app_ipcam_Ai_PD_Stop(), "PD Stop");
@@ -162,7 +163,8 @@ static int app_ipcam_Init(void)
 
     APP_CHK_RET(app_ipcam_Vpss_Init(), "init vpss module");
 
-    APP_CHK_RET(app_ipcam_Osdc_Init(), "init Draw Osdc");
+    // APP_CHK_RET(app_ipcam_Osdc_Init(), "init Draw Osdc");
+    (void) app_ipcam_Osdc_Init;
 
     #ifdef WEB_SOCKET
     APP_CHK_RET(app_ipcam_NetCtrl_Init(), "Net Ctrl init");
